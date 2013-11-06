@@ -22,6 +22,7 @@ class users_controller extends base_controller {
 
         $error = 0;
         $this->template->content = View::instance('v_users_signup');
+        $_POST = DB::instance(DB_NAME)->sanitize($_POST);
         if (isset($_POST['first_name'])) {
            $this->template->content->first_name = $_POST['first_name'];
            if (!preg_match("/^\S+[\b\S+]?$/", $_POST['first_name'])) {
