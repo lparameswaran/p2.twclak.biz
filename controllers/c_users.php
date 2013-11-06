@@ -115,6 +115,7 @@ class users_controller extends base_controller {
         # Setup view
         $this->template->content = View::instance('v_users_login');
         $this->template->title   = "Login";
+        $this->template->content->error   = 1;
 
         # Render template
         echo $this->template;

@@ -10,11 +10,16 @@ class posts_controller extends base_controller {
         }
     }
 
-    public function add() {
+    public function add($errorcode = 0) {
 
         # Setup view
         $this->template->content = View::instance('v_posts_add');
         $this->template->title   = "New Post";
+        if ($errorcode == 1) {
+           $this->template->content->error = "Post must contain atleast 2 words.";
+        } else if ($errorcode == 2) {
+           $this->template->content->error = "Post should be less than 255 characters.";
+        }
 
         # Render template
         echo $this->template;
@@ -26,12 +31,18 @@ class posts_controller extends base_controller {
         # Associate this post with this user
         $_POST['user_id']  = $this->user->user_id;
 
+        $_POST = DB::instance(DB_NAME)->sanitize($_POST);
+        if (!preg_match("/\S+\s+\S+/", $_POST['content'])) {
+           Router::redirect("/posts/add/1");
+        }
+        if (strlen($_POST['content']) > 254) {
+           Router::redirect("/posts/add/2");
+        }
+
         # Unix timestamp of when this post was created / modified
         $_POST['created']  = Time::now();
         $_POST['modified'] = Time::now();
 
-        # Insert
-        # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
         DB::instance(DB_NAME)->insert('posts', $_POST);
 
         Router::redirect("/posts/");
@@ -224,6 +235,14 @@ class posts_controller extends base_controller {
         }
 
         Router::redirect("/posts");
+    }
+
+    public function delete($post_id) {
+        $where_condition = 'WHERE user_id = '.$this->user->user_id.' AND post_id = '.$post_id;
+        DB::instance(DB_NAME)->delete('posts', $where_condition);
+        
+        Router::redirect("/posts");
+
     }
 }
 ?>

@@ -5,6 +5,7 @@
            <th>Name</th>
            <th>Post</th>
            <th>Time</th>
+           <th>Like?</th>
            <th>Actions</th>
         </tr>
     </thead>
@@ -14,8 +15,9 @@
           <td><?=$post['first_name']?> <?=$post['last_name']?></td>
           <td><?=$post['content']?></td>
           <td><?=Time::display($post['created'],'Y/m/d G:i')?></td>
-          <td>
                <?php if ($post['post_user_id'] == $this_user_id): ?>
+                  <td>Like</td>
+                  <td>
                   <form method='POST' action='/posts/delete/<?=$post["post_id"]?>'>
                      <input type="submit" value="Delete">
                   </form> <br/>
@@ -36,14 +38,21 @@
                   <?php endif; ?>
                   <?php $bgimage = "background='/images/DisLike.png'"; ?>
                   <?php if ($currentlikestatus == 1): ?>
-                      <form method='POST' action='/posts/dislike/<?=$post["post_id"]?>'>
-                          <input type="submit" value="Dislike">
-                      </form><br/>
                       <?php $bgimage = "background='/images/Like.png'"; ?>
+                      <td <?=$bgimage?>>Like</td>
+                      <td>
                   <?php else: ?>
-                      <form method='POST' action='/posts/like/<?=$post["post_id"]?>'>
-                          <input type="submit" value="Like">
-                      </form><br />
+                      <td <?=$bgimage?>>DisLike</td>
+                      <td>
+                  <?php endif; ?>
+                  <?php if ($currentlikestatus == 1): ?>
+                          <form method='POST' action='/posts/dislike/<?=$post["post_id"]?>'>
+                             <input type="submit" value="Dislike">
+                          </form><br/>
+                  <?php else: ?>
+                          <form method='POST' action='/posts/like/<?=$post["post_id"]?>'>
+                             <input type="submit" value="Like">
+                          </form><br />
                   <?php endif; ?>
                   Rate
                           <form method='POST' action='/posts/rate/<?=$post["post_id"]?>'>
@@ -55,7 +64,7 @@
                             <option <?php if ($currentrating == 4) echo "selected='selected'";?> value="4">Good</option>
                             <option <?php if ($currentrating == 5) echo "selected='selected'";?> value="5">Excellent</option>
                           </select>
-                       </form>
+                          </form>
                <?php endif; ?>
            </td>
        </tr>

@@ -3,6 +3,10 @@
     <label for='content'>New Post:</label><br>
     <textarea name='content' id='content'></textarea>
 
+    <?php if (isset($error)): ?>
+       <div class="error"><?=$error?></div>
+    <?php endif; ?>
+
     <br><br>
     <input type='submit' value='New post'>
 
