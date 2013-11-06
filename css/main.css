@@ -1,0 +1,58 @@
+body {
+   background-color:#C4C3A2;
+   font-family:Century Gothic, sans-serif;
+   font-weight:300;
+   font-size:16px;
+}
+
+#appname {
+   font-family:Palintino "Palatino Linotype", "Book Antiqua", Palatino, serif;
+   font-weight:100;
+   font-size:30px;
+   color:#7D1616;
+   font-style:oblique;
+}
+
+#heading {
+   font-family:Georgia, "Times New Roman", Times, serif;
+   font-weight:400;
+   font-size:25px;
+   color:#68756A;
+}
+
+#blogdescr {
+   font-family:Georgia, "Times New Roman", Times, serif;
+   font-weight:200;
+   font-size:20px;
+   color:#68756A;
+}
+
+#addlfeatures {
+   font-family:Palintino "Palatino Linotype", "Book Antiqua", Palatino, serif;
+   font-weight:200;
+   font-size:20px;
+   color:#68756A;
+   border-style:solid;
+   border-width:medium;
+}
+
+#blogfooter {
+   font-family:Georgia, "Times New Roman", Times, serif;
+   font-weight:200;
+   font-size:100%;
+   color:#68756A;
+   border-style:dotted;
+   border-width:medium;
+}
+
+#error {
+   color: orange;
+}
+
+#content {
+   width: 90%;
+   font-size: 16px;
+   border-style:solid;
+   border-width:medium;
+}
+

@@ -1,0 +1,50 @@
+2013-10-30 0:22:15 - INFO --> -------------------------- 
+2013-10-30 0:22:15 - INFO --> Controller/Method: users/p_login 
+2013-10-30 0:22:15 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-30 0:22:15 - INFO --> From: Sample App (webmaster@sample-app.com) 
+2013-10-30 0:22:15 - INFO --> To: Sample App (webmaster@myapp.com),  
+2013-10-30 0:22:15 - INFO --> CC:  
+2013-10-30 0:22:15 - INFO --> BCC:  
+2013-10-30 0:22:15 - INFO --> Subject: Sample App SQL Error 
+2013-10-30 0:22:15 - INFO --> Body: <h2>SQL Error</h2> SELECT token 
+           FROM users 
+           WHERE email = 'lak@test.com' 
+           AND password = '609221f54d2976cbc956e1d1b7ff4f043ecbd577' Table 'twclakbi_p2_twclak_biz.users' doesn't exist<h2>Query History</h2>0 = SELECT token 
+           FROM users 
+           WHERE emai 
+2013-10-30 0:24:16 - INFO --> -------------------------- 
+2013-10-30 0:24:16 - INFO --> Controller/Method: users/p_signup 
+2013-10-30 0:24:16 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-30 0:24:16 - INFO --> From: Sample App (webmaster@sample-app.com) 
+2013-10-30 0:24:16 - INFO --> To: Sample App (webmaster@myapp.com),  
+2013-10-30 0:24:16 - INFO --> CC:  
+2013-10-30 0:24:16 - INFO --> BCC:  
+2013-10-30 0:24:16 - INFO --> Subject: Sample App SQL Error 
+2013-10-30 0:24:16 - INFO --> Body: <h2>SQL Error</h2> INSERT INTO users SET first_name = 'Lakshman', last_name = 'Parameswaran', email = 'lparameswaran@g.harvard.edu', password = '609221f54d2976cbc956e1d1b7ff4f043ecbd577', created = '1383107056', modified = '1383107056', token = '08974f76fb6441edaca38b2083f751e53efd3798' Table 'twcla 
+2013-10-30 0:26:43 - INFO --> -------------------------- 
+2013-10-30 0:26:43 - INFO --> Controller/Method: users/p_signup 
+2013-10-30 0:26:43 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-30 0:26:43 - INFO --> From: Sample App (webmaster@sample-app.com) 
+2013-10-30 0:26:43 - INFO --> To: Sample App (webmaster@myapp.com),  
+2013-10-30 0:26:43 - INFO --> CC:  
+2013-10-30 0:26:43 - INFO --> BCC:  
+2013-10-30 0:26:43 - INFO --> Subject: Sample App SQL Error 
+2013-10-30 0:26:43 - INFO --> Body: <h2>SQL Error</h2> INSERT INTO users SET first_name = 'Lakshman', last_name = 'Parameswaran', email = 'lparameswaran@g.harvard.edu', password = '609221f54d2976cbc956e1d1b7ff4f043ecbd577', created = '1383107203', modified = '1383107203', token = '2cc1ae5b3be58da3432688cb691b75c0a39a7727' Table 'twcla 
+2013-10-30 0:27:14 - INFO --> -------------------------- 
+2013-10-30 0:27:14 - INFO --> Controller/Method: users/p_signup 
+2013-10-30 0:27:14 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-30 0:27:14 - INFO --> From: Sample App (webmaster@sample-app.com) 
+2013-10-30 0:27:14 - INFO --> To: Sample App (webmaster@myapp.com),  
+2013-10-30 0:27:14 - INFO --> CC:  
+2013-10-30 0:27:14 - INFO --> BCC:  
+2013-10-30 0:27:14 - INFO --> Subject: Sample App SQL Error 
+2013-10-30 0:27:14 - INFO --> Body: <h2>SQL Error</h2> INSERT INTO users SET first_name = 'Lakshman', last_name = 'Parameswaran', email = 'lparameswaran@g.harvard.edu', password = '609221f54d2976cbc956e1d1b7ff4f043ecbd577', created = '1383107234', modified = '1383107234', token = 'bf05600671917ccc6a8cfa0056ee8f89fbb1ff82' Table 'twcla 
+2013-10-30 0:32:20 - INFO --> -------------------------- 
+2013-10-30 0:32:20 - INFO --> Controller/Method: users/p_signup 
+2013-10-30 0:32:20 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@myapp.com 
+2013-10-30 0:32:20 - INFO --> From: Sample App (webmaster@sample-app.com) 
+2013-10-30 0:32:20 - INFO --> To: Sample App (webmaster@myapp.com),  
+2013-10-30 0:32:20 - INFO --> CC:  
+2013-10-30 0:32:20 - INFO --> BCC:  
+2013-10-30 0:32:20 - INFO --> Subject: Sample App SQL Error 
+2013-10-30 0:32:20 - INFO --> Body: <h2>SQL Error</h2> INSERT INTO users SET first_name = 'Lakshman', last_name = 'Parameswaran', email = 'lparameswaran@g.harvard.edu', password = '609221f54d2976cbc956e1d1b7ff4f043ecbd577', created = '1383107540', modified = '1383107540', token = '70e08f9291e0185487595758ba1e2d6d3e0038cf' Table 'twcla 

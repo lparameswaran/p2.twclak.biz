@@ -1,0 +1,9 @@
+2013-11-03 13:34:24 - INFO --> -------------------------- 
+2013-11-03 13:34:24 - INFO --> Controller/Method: users/p_signup 
+2013-11-03 13:34:24 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@twclak.biz 
+2013-11-03 13:34:24 - INFO --> From: Tweetz (webmaster@twclak.biz) 
+2013-11-03 13:34:24 - INFO --> To: Tweetz (webmaster@twclak.biz),  
+2013-11-03 13:34:24 - INFO --> CC:  
+2013-11-03 13:34:24 - INFO --> BCC:  
+2013-11-03 13:34:24 - INFO --> Subject: Tweetz SQL Error 
+2013-11-03 13:34:24 - INFO --> Body: <h2>SQL Error</h2> INSERT INTO users SET first_name = 'l', last_name = '', email = '', password = 'eb9604aef8a7e1e233d776f9b65f9c3a92d33e9c', created = '1383503664', modified = '1383503664', token = '89df61d9164ef115265f73ccb8e3b328eb2b3999' Duplicate entry '' for key 'nickname'<h2>Query History</h2 
