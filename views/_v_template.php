@@ -5,14 +5,14 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 
-        <!== Global JS/CSS includes -->
+        <!-- Global JS/CSS includes -->
         <LINK href="/css/main.css" rel="stylesheet" type="text/css">
         <script src="/js/Dable.js"> </script>
         <script src="/js/jquery-2.0.3.min.js"> </script>
 					
 	<!-- Controller Specific JS/CSS -->
 
-        <!== Global JS/CSS head -->
+        <!-- Global JS/CSS head -->
 </head>
 
 <body>	

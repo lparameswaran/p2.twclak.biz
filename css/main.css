@@ -1,12 +1,12 @@
 body {
    background-color:#C4C3A2;
-   font-family:Century Gothic, sans-serif;
+   font-family:"Century Gothic", sans-serif;
    font-weight:300;
    font-size:16px;
 }
 
-#appname {
-   font-family:Palintino "Palatino Linotype", "Book Antiqua", Palatino, serif;
+.appname {
+   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
    font-weight:100;
    font-size:30px;
    color:#7D1616;
@@ -28,7 +28,7 @@ body {
 }
 
 #addlfeatures {
-   font-family:Palintino "Palatino Linotype", "Book Antiqua", Palatino, serif;
+   font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
    font-weight:200;
    font-size:20px;
    color:#68756A;
@@ -45,8 +45,8 @@ body {
    border-width:medium;
 }
 
-#error {
-   color: orange;
+.error {
+   color: red;
 }
 
 #content {

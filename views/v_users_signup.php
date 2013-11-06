@@ -51,7 +51,7 @@
             <td><input type='text' name='first_name'></td>
         <?php endif; ?>
         <td class="error"><?php if (isset($error_first_name)) echo $error_first_name; ?></td>
-        <div class="error" id="error_first_name"></div>
+        <td class="error"><div id="error_first_name"></div></td>
       </tr>
       <tr>
         <td>Last Name</td>
@@ -61,7 +61,7 @@
             <td><input type='text' name='last_name'></td>
         <?php endif; ?>
         <td class="error"><?php if (isset($error_last_name)) echo $error_last_name; ?></td>
-        <div class="error" id="error_last_name"></div>
+        <td class="error"><div id="error_last_name"></div></td>
       </tr>
       <tr>
         <td>Email Address</td>
@@ -71,7 +71,7 @@
             <td><input type='email' name='email'></td>
         <?php endif; ?>
         <td class="error"><?php if (isset($error_email)) echo $error_email; ?></td>
-        <div class="error" id="error_email"></div>
+        <td class="error"><div id="error_email"></div></td>
       </tr>
       <tr>
         <td>Password</td>
@@ -81,11 +81,24 @@
             <td><input type='password' name='password'></td>
         <?php endif; ?>
         <td class="error"><?php if (isset($error_password)) echo $error_password; ?></td>
-        <div class="error" id="error_password"></div>
+        <td class="error"><div id="error_password"></div></td>
       </tr>
       <tr>
-	<!-- <td colspan="3"><input type='submit' onsubmit="validateForm()" value='Sign up'></td> -->
-        <td colspan="3"><input type='submit' value='Sign up'></td>
+	<td colspan="4"><input type='submit' onsubmit="validateForm()" value='Sign up'></td>
       </tr>
     </table>
 </form>
+
+<p>
+   <a href="http://jigsaw.w3.org/css-validator/check/referer">
+      <img style="border:0;width:88px;height:31px"
+           src="http://jigsaw.w3.org/css-validator/images/vcss"
+           alt="Valid CSS!" />
+   </a>
+   <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fp2.twclak.biz%2Fusers%2Fsignup">
+      <img style="border:0;width:88px;height:31px"
+           src="/images/HTML5_Logo_512.png"
+           alt="Valid HTML5!" />
+   </a>
+</p> 
+
