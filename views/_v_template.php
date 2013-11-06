@@ -7,6 +7,8 @@
 
         <!== Global JS/CSS includes -->
         <LINK href="/css/main.css" rel="stylesheet" type="text/css">
+        <script src="/js/Dable.js"> </script>
+        <script src="/js/jquery-2.0.3.min.js"> </script>
 					
 	<!-- Controller Specific JS/CSS -->
 

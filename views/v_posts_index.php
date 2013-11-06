@@ -1,21 +1,24 @@
-<table id="posttable" border="2">
-    <tr>
-       <th>Name</th>
-       <th>Post</th>
-       <th>Time</th>
-       <th>Actions</th>
-    </tr>
+<div id="posttable">
+  <table>
+    <thead>
+        <tr>
+           <th>Name</th>
+           <th>Post</th>
+           <th>Time</th>
+           <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
     <?php foreach($posts as $post): ?>
        <tr>
           <td><?=$post['first_name']?> <?=$post['last_name']?></td>
           <td><?=$post['content']?></td>
           <td><?=Time::display($post['created'],'Y/m/d G:i')?></td>
           <td>
-             <table>
                <?php if ($post['post_user_id'] == $this_user_id): ?>
-                  <tr><td><form method='POST' action='/posts/delete/<?=$post["post_id"]?>'>
+                  <form method='POST' action='/posts/delete/<?=$post["post_id"]?>'>
                      <input type="submit" value="Delete">
-                  </form></td></tr>
+                  </form> <br/>
                <?php else: ?>
                   <?php $currentlikestatus=1; ?>
                   <?php $currentrating=0; ?>
@@ -33,17 +36,16 @@
                   <?php endif; ?>
                   <?php $bgimage = "background='/images/DisLike.png'"; ?>
                   <?php if ($currentlikestatus == 1): ?>
-                      <tr><td colspan="2" background="/images/Like.png"><form method='POST' action='/posts/dislike/<?=$post["post_id"]?>'>
+                      <form method='POST' action='/posts/dislike/<?=$post["post_id"]?>'>
                           <input type="submit" value="Dislike">
-                      </form></td></tr>
+                      </form><br/>
                       <?php $bgimage = "background='/images/Like.png'"; ?>
                   <?php else: ?>
-                      <tr><td colspan="2" background="/images/DisLike.png"><form method='POST' action='/posts/like/<?=$post["post_id"]?>'>
+                      <form method='POST' action='/posts/like/<?=$post["post_id"]?>'>
                           <input type="submit" value="Like">
-                      </form></td></tr>
+                      </form><br />
                   <?php endif; ?>
-                  <tr><td>Rate</td>
-                       <td <?=$bgimage?>>
+                  Rate
                           <form method='POST' action='/posts/rate/<?=$post["post_id"]?>'>
                           <select name="rating" onchange="this.form.submit()">
                             <option <?php if ($currentrating == 0) echo "selected='selected'";?> value="0">None</option>
@@ -53,11 +55,16 @@
                             <option <?php if ($currentrating == 4) echo "selected='selected'";?> value="4">Good</option>
                             <option <?php if ($currentrating == 5) echo "selected='selected'";?> value="5">Excellent</option>
                           </select>
-                       </form></td>
-                   </tr>
+                       </form>
                <?php endif; ?>
-             </table>
            </td>
        </tr>
     <?php endforeach; ?>
-</table>
+    </tbody>
+  </table>
+</div>
+
+<script type="text/javascript">
+   var dable = new Dable("posttable");
+</script>
+   

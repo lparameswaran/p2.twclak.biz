@@ -6,6 +6,7 @@
       <tr> <td> Like/Unlike posts </td> </tr>
       <tr> <td> Rating of posts </td> </tr>
       <tr> <td> Delete own posts </td> </tr>
+      <tr> <td> (Javascript) Table searching/pagination/sorting </td> </tr>
    </table>
    <div id="blogfooter"><span id="appname"><?=APP_NAME?></span> has been developed by Lakshman Parameswaran for CSCIE15, Harvard University, Fall 2013 - Professor Susan Buck </div>
    <?php $included = 3; ?>
