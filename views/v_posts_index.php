@@ -31,17 +31,20 @@
                   <?php if (isset($currentrating) && (($currentrating < 0) || ($currentrating > 5))): ?>
                        <?php $currentrating = 0; ?>
                   <?php endif; ?>
+                  <?php $bgimage = "background='/images/DisLike.png'"; ?>
                   <?php if ($currentlikestatus == 1): ?>
-                      <tr><td colspan="2"><form method='POST' action='/posts/dislike/<?=$post["post_id"]?>'>
+                      <tr><td colspan="2" background="/images/Like.png"><form method='POST' action='/posts/dislike/<?=$post["post_id"]?>'>
                           <input type="submit" value="Dislike">
                       </form></td></tr>
+                      <?php $bgimage = "background='/images/Like.png'"; ?>
                   <?php else: ?>
-                      <tr><td colspan="2"><form method='POST' action='/posts/like/<?=$post["post_id"]?>'>
+                      <tr><td colspan="2" background="/images/DisLike.png"><form method='POST' action='/posts/like/<?=$post["post_id"]?>'>
                           <input type="submit" value="Like">
                       </form></td></tr>
                   <?php endif; ?>
                   <tr><td>Rate</td>
-                       <td><form method='POST' action='/posts/rate/<?=$post["post_id"]?>'>
+                       <td <?=$bgimage?>>
+                          <form method='POST' action='/posts/rate/<?=$post["post_id"]?>'>
                           <select name="rating" onchange="this.form.submit()">
                             <option <?php if ($currentrating == 0) echo "selected='selected'";?> value="0">None</option>
                             <option <?php if ($currentrating == 1) echo "selected='selected'";?> value="1">Worst</option>
